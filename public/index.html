@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>URL shortener</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="./bs-callout.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>URL Shortener Microservice <small> for freecodecamp</small></h1>
+    <div class="bs-callout bs-callout-info">
+      <h4>User stories</h4>
+      <ol>
+        <li>I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</li>
+        <li>If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.</li>
+        <li>When I visit that shortened URL, it will redirect me to my original link.</li>
+      </ol>
+    </div>
+    <h3>Example usage:</h3>
+    <code>https://sebusch-url.herokuapp.com/new/https://www.google.com</code><br/>
+    <h3>Example ooutput:</h3>
+    <samp>{ "original_url": "http://www.google.com", "short_url": "https://sebusch-url.herokuapp.com/2839" }</samp>
+    <h3>Usage: </h3>
+    <code>https://sebusch-url.herokuapp.com/2839</code>
+    <h3>Will redirect to:
+    <code>https://www.google.com</code>
+  </div>
+</body>
+
+</html>
