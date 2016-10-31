@@ -34,11 +34,17 @@ app.get( '/', function( req, res, next ) {
   res.render( 'index.html' );
 } );
 
+app.use( myErrorHandler );
+
 app.listen( port, function() {
   console.log( 'Example app listening on port %d!', port );
 } );
 
 
+function myErrorHandler( err, req, res, next ) {
+  res.send({ error: err.message });
+  next(err);
+}
 
 function redirectDB( req, res ) {
 
